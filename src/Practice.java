@@ -39,5 +39,36 @@ public class Practice {
     }
     return frequencies;
   }
-  
+
+  /**
+   * Returns the integer that shows up most frequently in a List.
+   * If there is a tie, any one of the most common can be returned
+   * arbitrarily.
+   * 
+   * THIS METHOD MUST RUN IN O(n) TIME. n = nums.size()
+   * 
+   * @param nums A list of integers
+   * @return the integer that shows up most commonly
+   */
+  public static int mostCommonTimeEfficient(List<Integer> nums) {
+    // TODO: Complete this method with an implementation that runs
+    // in O(n) time. n = nums.size()
+    return -1;
+  }
+
+  /**
+   * Returns the integer that shows up most frequently in a List.
+   * If there is a tie, any one of the most common can be returned
+   * arbitrarily.
+   * 
+   * THIS METHOD MUST USE ONLY O(1) SPACE.
+   * 
+   * @param nums A list of integers
+   * @return the integer that shows up most commonly
+   */
+  public static int mostCommonSpaceEfficient(List<Integer> nums) {
+    // TODO: Complete this method with an implementation that runs
+    // in O(1) space.
+    return -1;
+  }
 }
