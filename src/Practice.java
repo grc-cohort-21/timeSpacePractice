@@ -41,32 +41,42 @@ public class Practice {
   }
 
   /**
-   * Returns the integer that shows up most frequently in a List.
+   * Returns the integer that shows up most frequently in an array.
    * If there is a tie, any one of the most common can be returned
    * arbitrarily.
    * 
    * THIS METHOD MUST RUN IN O(n) TIME. n = nums.size()
    * 
-   * @param nums A list of integers
+   * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
+   * 
+   * Time Complexity: 
+   * Space Complexity: 
+   * 
+   * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
-  public static int mostCommonTimeEfficient(List<Integer> nums) {
+  public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
     return -1;
   }
 
   /**
-   * Returns the integer that shows up most frequently in a List.
+   * Returns the integer that shows up most frequently in an array.
    * If there is a tie, any one of the most common can be returned
    * arbitrarily.
    * 
    * THIS METHOD MUST USE ONLY O(1) SPACE.
    * 
-   * @param nums A list of integers
+   * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
+   * 
+   * Time Complexity: 
+   * Space Complexity: 
+   * 
+   * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
-  public static int mostCommonSpaceEfficient(List<Integer> nums) {
+  public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
     return -1;
