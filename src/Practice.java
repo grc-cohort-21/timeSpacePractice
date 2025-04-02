@@ -52,8 +52,8 @@ public class Practice {
 
   /**
    * Returns the integer that shows up most frequently in an array.
-   * If there is a tie, any one of the most common can be returned
-   * arbitrarily.
+   * If there is a tie, tiebreak by returning the one that shows up first
+   * in the array.
    * 
    * THIS METHOD MUST RUN IN O(n) TIME. n = nums.size()
    * 
@@ -73,8 +73,8 @@ public class Practice {
 
   /**
    * Returns the integer that shows up most frequently in an array.
-   * If there is a tie, any one of the most common can be returned
-   * arbitrarily.
+   * If there is a tie, tiebreak by returning the one that shows up first
+   * in the array.
    * 
    * THIS METHOD MUST USE ONLY O(1) SPACE.
    * 
