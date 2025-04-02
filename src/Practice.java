@@ -40,6 +40,16 @@ public class Practice {
     return frequencies;
   }
 
+  // Time Complexity: 
+  // Space Complexity: 
+  public static List<Integer> evensToSquare(int n) {
+    List<Integer> evens = new ArrayList<>();
+    for(int i = 0; i <= n*n; i+=2) {
+      evens.add(i);
+    }
+    return evens;
+  }
+
   /**
    * Returns the integer that shows up most frequently in an array.
    * If there is a tie, any one of the most common can be returned
