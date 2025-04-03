@@ -69,7 +69,9 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
-
+    if (nums == null || nums.length == 0) {
+      throw new IllegalArgumentException("Input array is empty or null");
+  }
     Map<Integer, Integer> temp = new HashMap<>();
     int common = 0;
     for(int num: nums){
