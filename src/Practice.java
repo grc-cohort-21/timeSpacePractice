@@ -70,7 +70,7 @@ public class Practice {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
     if (time : nums) {
-      
+
     }
     return -1;
   }
@@ -90,9 +90,30 @@ public class Practice {
    * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
-  public static int mostCommonSpaceEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
-    // in O(1) space.
-    return -1;
-  }
+ public static int mostCommonSpaceEfficient(int[] nums) {
+    if (nums == null || nums.length == 0) {
+        throw new IllegalArgumentException("Input array is empty or null");
+    }
+    
+    int maxCount = 0;
+    int mostCommon = nums[0];
+    
+    for (int i = 0; i < nums.length; i++) {
+        int currentNum = nums[i];
+        int currentCount = 0;
+        
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] == currentNum) {
+                currentCount++;
+            }
+        }
+        
+        if (currentCount > maxCount) {
+            maxCount = currentCount;
+            mostCommon = currentNum;
+        }
+    }
+    
+    return mostCommon;
+}
 }
