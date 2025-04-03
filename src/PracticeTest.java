@@ -33,6 +33,14 @@ public class PracticeTest {
     assertEquals(4, common);
   }
 
+  @Test
+  void mostCommonSpaceEfficient_basic(){
+    int[] nums = { 3, 4, 5, 8, 9, 2, 4, 3, 3 };
+    
+    int common = Practice.mostCommonSpaceEfficient(nums);
+
+    assertEquals(3, common);
+  }
   // Hints: They are static methods, so you will use the full
   // Practice.mostCommonTimeEfficient for method calls
 }
