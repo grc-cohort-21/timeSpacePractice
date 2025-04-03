@@ -60,7 +60,7 @@ public class Practice {
    * 
    * THIS METHOD MUST RUN IN O(n) TIME. n = nums.size()
    * 
-   * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
+   * Once you finish, WRITE TESTS FOR IT in PracticeTest.java     // [1, 1, 2, 2, 3]
    * 
    * Time Complexity: 
    * Space Complexity: 
@@ -71,7 +71,25 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
-    return -1;
+
+    int commonNum = 0;
+
+    Map<Integer, Integer> myMap = new HashMap<>();
+
+    for (int num : nums)
+    {
+      if (!myMap.containsKey(num))
+      {
+        int appears = 0;
+        appears += 1;
+        myMap.put(num, appears);
+      }
+      //appears+=1;
+
+    }
+
+    // if tie, return first one
+    return commonNum;
   }
 
   /**
