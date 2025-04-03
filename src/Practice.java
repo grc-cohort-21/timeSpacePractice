@@ -17,8 +17,8 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: O(n)
+  // Space Complexity: O(1)
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
@@ -26,10 +26,9 @@ public class Practice {
     }
     return sum;
   }
-  
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity:
+  // Space Complexity:
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
@@ -40,11 +39,11 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity:
+  // Space Complexity:
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
-    for(int i = 0; i <= n*n; i+=2) {
+    for (int i = 0; i <= n * n; i += 2) {
       evens.add(i);
     }
     return evens;
@@ -59,8 +58,8 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity:
+   * Space Complexity:
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
@@ -80,8 +79,8 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity:
+   * Space Complexity:
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
