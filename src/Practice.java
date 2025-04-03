@@ -82,7 +82,7 @@ public class Practice {
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
    * Time Complexity: 
-   * Space Complexity: 
+   * Space Complexity: o(1)
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
@@ -90,6 +90,29 @@ public class Practice {
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
+    int counter = 0;
+
+    String list = "";
+  
+    for(int i = 0; i < nums.length; i++)
+    {
+      if(nums[i] == nums[i+1])
+      {
+        counter++;
+      }
+      else
+      {
+        list = list + counter;
+        counter = 0;
+      }
+    }
+
+    for(int i = 0; i < list.length(); i++)    
+    {
+      //if()
+    }
+
+
     return -1;
   }
 }
