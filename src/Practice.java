@@ -74,21 +74,22 @@ public class Practice {
 
     int commonNum = 0;
 
-    Map<Integer, Integer> myMap = new HashMap<>();
+    Map<Integer, Integer> myMap = new HashMap<>(); // keys: nums, values: appearance
 
-    for (int num : nums)
+    for (int num : nums) // for each num in nums array (ex. [1, 1, 2, 2, 3])
     {
-      if (!myMap.containsKey(num))
+      if (!myMap.containsKey(num)) // current map: {}
       {
-        int appears = 0;
-        appears += 1;
-        myMap.put(num, appears);
+        myMap.put(num, 0);  // map after: {1:0}
       }
-      //appears+=1;
-
+      
+      int appears = myMap.get(num) + 1;        // appears = 0 + 1 --> 1
+      myMap.put(num, appears);                 // map after: {1: 1}
     }
 
     // if tie, return first one
+
+    // if appears > commonNum, commonNum = appears
     return commonNum;
   }
 
