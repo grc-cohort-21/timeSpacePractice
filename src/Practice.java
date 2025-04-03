@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class Practice {
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: O(n) n = array.length
+  // Space Complexity: O(n) = n = evens.length
   public static List<Integer> findEvens(int[] array) {
     List<Integer> evens = new ArrayList<>();
     for (int num : array) {
@@ -17,8 +17,8 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: O(n), n = matrix.length
+  // Space Complexity: O(n^2), n = sum
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
@@ -28,8 +28,8 @@ public class Practice {
   }
   
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity:  O(n), n = array.length
+  // Space Complexity: o(n), n = frequencies.length
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
@@ -40,8 +40,8 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: O(n^2), n = n
+  // Space Complexity: O(n), n = evens
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
     for(int i = 0; i <= n*n; i+=2) {
@@ -59,8 +59,8 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: O(n), n = nums
+   * Space Complexity: O(n), n = uniqueCount
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
@@ -68,7 +68,23 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
-    return -1;
+    Map<Integer, Integer> uniqueCount = new HashMap<>();
+    for (int i : nums) {
+      if (!uniqueCount.containsKey(i)) {
+        uniqueCount.put(i, 1);
+      } else {
+        uniqueCount.put(i, uniqueCount.get(i) + 1);
+      }
+    }
+    int mostCommon = 0;
+    int mostCommonCounter = 0;
+    for (Map.Entry<Integer, Integer> entry : uniqueCount.entrySet()) {
+      if (entry.getValue()>mostCommonCounter){
+        mostCommon = entry.getKey();
+        mostCommonCounter = entry.getValue();
+      }
+    }
+    return mostCommon;
   }
 
   /**
