@@ -84,7 +84,7 @@ public class Practice {
     }
 
     int max = 0;
-    int maxInteger = 0;
+    int maxInteger = -1;
     for (int key : frequentValue.keySet()) {
       if (frequentValue.get(key) > max) {
         max = frequentValue.get(key);
@@ -103,8 +103,9 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: O(n^2)
+   * Space Complexity: 0(1)
+   * Where n is the length of nums array
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
@@ -112,6 +113,20 @@ public class Practice {
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
-    return -1;
+    int count = 0;
+    int maxCount = 0;
+    int maxInt = -1;
+    for (int i = 0; i < nums.length - 1; i++) {
+      for (int j = i + 1; j < nums .length - 1; j++) {
+        if (nums[i] == nums[j]) {
+          count++;
+        }
+      }
+      if (count > maxCount) {
+        maxInt = nums[i];
+      }
+      count = 0;
+    }
+    return maxInt;
   }
 }

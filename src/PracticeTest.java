@@ -20,5 +20,20 @@ public class PracticeTest {
     assertEquals(2, result);
   }
 
+  @Test
+  public void testMostCommonSpaceEfficient() {
+    // arrage
+    int[] intArray = new int[5];
+    intArray[0] = 1;
+    intArray[1] = 2;
+    intArray[2] = 2;
+    intArray[3] = 3;
+    intArray[4] = 3;
+    // act
+    int result = Practice.mostCommonSpaceEfficient(intArray);
+    // assert
+    assertEquals(2, result);
+  }
+
   // Hints: They are static methods, so you will use the full Practice.mostCommonTimeEfficient for method calls
 }
