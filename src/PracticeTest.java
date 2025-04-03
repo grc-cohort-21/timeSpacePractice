@@ -11,13 +11,6 @@ public class PracticeTest {
 @Test
  public static int Practice.mostCommonTimeEfficient(int[] nums) {
    
-
-    for (Integer current: temp.keySet()){
-      if(temp.get(current) < common){
-        common = current;
-      }
-    }
-    return common;
   }
 
 public static mostCommonSpaceEfficient() {
