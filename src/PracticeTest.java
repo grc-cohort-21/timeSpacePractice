@@ -13,16 +13,16 @@ public static int mostCommonTimeEfficient() {
 
 @Test
 public static void mostCommonSpaceEfficient_mixedNums() {
-  int[] arr = {1,2,3,4,4,4};
+  int[] arr = {1,2,3,4,3,4,4};
   int actual = Practice.mostCommonSpaceEfficient(arr);
   assertEquals(4, actual);
 }
 
 @Test
 public static void mostCommonSpaceEfficient_tie(){
-  int[] arr = {1,1,2,3,4,4};
+  int[] arr = {1,2,2,3,4,4};
   int actual = Practice.mostCommonSpaceEfficient(arr);
-  assertEquals(1, actual);
+  assertEquals(2, actual);
 }
 
 @Test
