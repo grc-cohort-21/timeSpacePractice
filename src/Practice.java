@@ -81,7 +81,7 @@ public class Practice {
     }
     for (Integer current: temp.keySet()){
       if(temp.get(current) < common){
-        common = current
+        common = current;
       }
     }
     return common;
