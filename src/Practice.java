@@ -58,8 +58,8 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity:
-   * Space Complexity:
+   * Time Complexity: O(n) where n is the size of nums
+   * Space Complexity: O(n) where n is the size of maps
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
