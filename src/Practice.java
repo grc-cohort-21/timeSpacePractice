@@ -18,7 +18,7 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity: 
+  // Time Complexity:
   // Space Complexity: 
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
