@@ -72,6 +72,8 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
+
+
     return -1;
   }
 
@@ -93,6 +95,22 @@ public class Practice {
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
-    return -1;
+    int currentCount = 0;
+    int savedCount = 0;
+    int highestNumber = -1;
+    for (int i = 0; i < nums.length; i++) {
+      for (int j = i + 1; j < nums.length; j++) {
+        if (nums[i] == nums[j]) {
+          currentCount++;
+        }
+      }
+      if (currentCount > savedCount) {
+        savedCount = currentCount;
+        highestNumber = nums[i];
+      }
+      currentCount = 0;
+    }
+
+    return highestNumber;
   }
 }
