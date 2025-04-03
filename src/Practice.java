@@ -70,24 +70,24 @@ public class Practice {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
     if (nums == null || nums.length == 0) {
-      throw new IllegalArgumentException("Input array is empty or null");
+      throw new IllegalArgumentException("Invalid input");
   }
-    Map<Integer, Integer> temp = new HashMap<>();
-    int common = 0;
-    for(int num: nums){
-      if(!temp.containsKey(num)){
-        temp.put(num, 1);
-      }else{
-        temp.put(num, (temp.get(num) +1));
+  
+  Map<Integer, Integer> counts = new HashMap<>();
+  int result = nums[0];
+  int max = 1;
+  
+  for (int num : nums) {
+      int count = counts.getOrDefault(num, 0) + 1;
+      counts.put(num, count);
+      if (count > max) {
+          max = count;
+          result = num;
       }
-    }
-    for (Integer current: temp.keySet()){
-      if(temp.get(current) < common){
-        common = current;
-      }
-    }
-    return common;
   }
+  
+  return result;
+}
 
   /**
    * Returns the integer that shows up most frequently in an array.
