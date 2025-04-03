@@ -32,7 +32,7 @@ public class Practice {
 
   // Time Complexity: O(n)
   // Space Complexity: O(n)
-  // Where n is the length of the array
+  // Where n is the length of the array variable
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
@@ -45,7 +45,7 @@ public class Practice {
 
   // Time Complexity: O(n^2)
   // Space Complexity: O(n^2)
-  // Where n is n
+  // Where n is int n variable
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
     for(int i = 0; i <= n*n; i+=2) {
@@ -63,9 +63,9 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
-   * 
+   * Time Complexity: o(n)
+   * Space Complexity: o(n)
+   * n is the size of nums, where loops is reliant on it and space of map is reliant on it
    * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
