@@ -41,6 +41,24 @@ public class PracticeTest {
 
     assertEquals(3, common);
   }
+
+  @Test
+  void mostCommonSpaceEfficient_tie(){
+    int[] nums = { 3, 4, 5, 8, 9, 2, 4, 3, 3, 4};
+    
+    int common = Practice.mostCommonSpaceEfficient(nums);
+
+    assertEquals(3, common);
+  }
+
+  @Test
+  void mostCommonSpaceEfficient_basic2(){
+    int[] nums = { 3, 4, 5, 8, 9, 2, 4, 3, 3, 4,4};
+    
+    int common = Practice.mostCommonSpaceEfficient(nums);
+
+    assertEquals(4, common);
+  }
   // Hints: They are static methods, so you will use the full
   // Practice.mostCommonTimeEfficient for method calls
 }
