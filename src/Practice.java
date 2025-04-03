@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Practice {
 
-  // Time Complexity:
+  // Time Complexity: 
   // Space Complexity: 
   public static List<Integer> findEvens(int[] array) {
     List<Integer> evens = new ArrayList<>();
