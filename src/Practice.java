@@ -27,8 +27,8 @@ public class Practice {
     return sum;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: O(n) Where n is the size of the array
+  // Space Complexity: O(n) Where n is the size of the array
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
