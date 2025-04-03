@@ -29,15 +29,15 @@ public class Practice {
     return sum;
   }
   
-
-  // Time Complexity: 
-  // Space Complexity: 
+  // n = array length
+  // Time Complexity: O(n)
+  // Space Complexity: O(n)
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
     HashMap<T, Integer> frequencies = new HashMap<>();
-    for (T val : array) {
-      frequencies.put(val, frequencies.getOrDefault(val, 0) + 1);
+    for (T val : array) { // o(n)
+      frequencies.put(val, frequencies.getOrDefault(val, 0) + 1); // O(1)
     }
     return frequencies;
   }
