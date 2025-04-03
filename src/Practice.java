@@ -42,12 +42,13 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  //The size of N
+  // Time Complexity: o(N^2)
+  // Space Complexity: o(N
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
-    for(int i = 0; i <= n*n; i+=2) {
-      evens.add(i);
+    for(int i = 0; i <= n*n; i+=2) { //o(n^2)
+      evens.add(i); //o(1)
     }
     return evens;
   }
