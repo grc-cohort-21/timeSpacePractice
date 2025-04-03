@@ -18,8 +18,9 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // n = matrix.length
+  // Time Complexity: O(n)
+  // Space Complexity: O(1)
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
