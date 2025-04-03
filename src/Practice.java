@@ -105,6 +105,26 @@ public class Practice {
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
-    return -1;
+    
+    // Make a new array with size 10
+    int[] frequency = new int[10];
+
+    // Count the frequency 
+    for (int num : nums) {
+      frequency[num]++;
+    }
+
+    int maxFreq = 0;
+    int mostFrequent = -1; 
+
+    // Loop through frequency array to find the highest frequency
+    for (int i = 0; i < frequency.length; i++) {
+      if (frequency[i] > maxFreq) {
+        maxFreq = frequency[i];
+        mostFrequent = i;
+      }
+    }
+
+    return mostFrequent;
   }
 }

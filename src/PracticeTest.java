@@ -29,4 +29,24 @@ public class PracticeTest {
     assertEquals(2, actual);
   }
 
+  @Test
+  void mostCommonSpaceEfficient_oneValueHighestCount() {
+    // Arrange
+    int[] nums = {1,2,3,3,5,5,5};
+    // Assert
+    int actual = Practice.mostCommonSpaceEfficient(nums);
+    // Arrange
+    assertEquals(5, actual);
+  }
+
+  @Test
+  void mostCommonSpaceEfficient_trueTieBreaker() {
+    // Arrange
+    int[] nums = {1,2,3,3,4,4,4,5,5,5};
+    // Assert
+    int actual = Practice.mostCommonSpaceEfficient(nums);
+    // Arrange
+    assertEquals(4, actual);
+  }
+
 }
