@@ -75,23 +75,23 @@ public class Practice {
     Map<Integer, Integer> mapping = new HashMap<>();
     int commonNum = 0;
     
-    for(int item: nums)
+    for(int item: nums) //Loop the array
     {
-      if(!mapping.containsKey(item))
+      if(!mapping.containsKey(item)) //Store in map as a key if not there
       {
-        mapping.put(item, 0);
+        mapping.put(item, 0); //init value to 0
       }
 
-      int amount = mapping.get(item) + 1;
-      mapping.put(item, amount);
+      int amount = mapping.get(item) + 1; //Store the number in a Integer Variable
+      mapping.put(item, amount); //Add one to the value of the map
 
-      if(commonNum < mapping.get(item))
+      if(commonNum < mapping.get(item)) // if 0 is less than item(looped through array)'s values on the map 
       {
-        commonNum = mapping.get(item);
+        commonNum = mapping.get(item); // Assigned the returned value to the maps highest unique number value
       }
     }
-    
-    return commonNum;
+
+    return commonNum; //return unique number
   }
 
   /**
