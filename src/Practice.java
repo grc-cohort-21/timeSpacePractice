@@ -72,24 +72,25 @@ public class Practice {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
 
+    Map<Integer, Integer> mapping = new HashMap<>();
     int commonNum = 0;
-
-    Map<Integer, Integer> myMap = new HashMap<>(); // keys: nums, values: appearance
-
-    for (int num : nums) // for each num in nums array (ex. [1, 1, 2, 2, 3])
+    
+    for(int item: nums)
     {
-      if (!myMap.containsKey(num)) // current map: {}
+      if(!mapping.containsKey(item))
       {
-        myMap.put(num, 0);  // map after: {1:0}
+        mapping.put(item, 0);
       }
-      
-      int appears = myMap.get(num) + 1;        // appears = 0 + 1 --> 1
-      myMap.put(num, appears);                 // map after: {1: 1}
+
+      int amount = mapping.get(item) + 1;
+      mapping.put(item, amount);
+
+      if(commonNum < mapping.get(item))
+      {
+        commonNum = mapping.get(item);
+      }
     }
-
-    // if tie, return first one
-
-    // if appears > commonNum, commonNum = appears
+    
     return commonNum;
   }
 
