@@ -10,7 +10,6 @@ public class PracticeTest {
 
 // Tests for mostCommonTimeEfficient method //
 
-
 @Test
 void mostCommonTimeEfficient_SingleElement() 
 {
@@ -21,7 +20,6 @@ void mostCommonTimeEfficient_SingleElement()
   //assert
   assertEquals(100, actual);
 }
-
 
 @Test
 void mostCommonTimeEfficient_OneMostCommonValue() 
