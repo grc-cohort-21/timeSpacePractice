@@ -96,12 +96,12 @@ public class Practice {
     int keyWithMaxValue = 0;
 
     
-    for (Map.Entry<Integer, Integer> entry : intMap.entrySet()) 
+    for (int key : intMap.keySet()) 
     {
-      if (entry.getValue() > maxValue) 
+      if (intMap.get(key) > maxValue) 
       {
-          maxValue = entry.getValue();
-          keyWithMaxValue = entry.getKey();
+          maxValue = intMap.get(key);
+          keyWithMaxValue = key;
       }
     }
     return keyWithMaxValue;
