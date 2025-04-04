@@ -74,6 +74,7 @@ public class Practice {
 
     Map<Integer, Integer> mapping = new HashMap<>();
     int commonNum = 0;
+    int mostCommon = nums[0];
     
     for(int item: nums) //Loop the array
     {
@@ -88,10 +89,11 @@ public class Practice {
       if(commonNum < mapping.get(item)) // if 0 is less than item(looped through array)'s values on the map 
       {
         commonNum = mapping.get(item); // Assigned the returned value to the maps highest unique number value
+        mostCommon = item; // we return this value, so that if the first pair found is the expected value then it returns.
       }
     }
 
-    return commonNum; //return unique number
+    return mostCommon; //return unique number
   }
 
   /**

@@ -20,4 +20,26 @@ public class PracticeTest {
     assertEquals(expected, actual);
   }
 
+  @Test
+  void testUniqueNumTimeEfficientAlgo_multipleNumbers() {
+    // arrange
+    int input[] = {1,2,2,2,3,3,3,4};
+    int expected = 2;
+    // act
+    int actual = Practice.mostCommonTimeEfficient(input);
+    //assert
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  void testUniqueNumTimeEfficientAlgo_multipleNumbersFindMostUnique() {
+    // arrange
+    int input[] = {1,2,2,2,3,3,3,3,4};
+    int expected = 3;
+    // act
+    int actual = Practice.mostCommonTimeEfficient(input);
+    //assert
+    assertEquals(expected, actual);
+  }
+
 }
