@@ -10,14 +10,28 @@ public class PracticeTest {
 
   // ******************** TESTS for mostCommonTimeEfficient ********************
   @Test
-  void testMostCommonTimeEfficient_basicInput()
+  void testMostCommonTimeEfficient_oneMax()
   {
     // Arrange
-    
+    int[] input = {1, 5, 3, 7, 4, 4};
     // Act
-
+    int actual = Practice.mostCommonTimeEfficient(input);
     // Assert
+    assertEquals(4, actual);
   }
+
+  @Test
+  void testMostCommonTimeEfficient_multiMax()
+  {
+    // Arrange
+    int[] input = {2, 6, 4, 5, 4, 5, 3, 9, 9, 5, 4};
+    // Act
+    int actual = Practice.mostCommonTimeEfficient(input);
+    // Assert
+    assertEquals(4, actual);
+  }
+
+  
 
 
   // ******************** TESTS of mostCommonSpaceEfficient ********************
