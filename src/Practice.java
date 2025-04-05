@@ -68,6 +68,13 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
+    
+    // Empty Handling
+    if (nums == null || nums.length == 0)
+    {
+      return 0;
+    }
+
     Map<Integer, Integer> numfreq = new HashMap<>();
     
     for (int i = 0; i < nums.length; i++)

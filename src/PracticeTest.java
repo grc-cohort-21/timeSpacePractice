@@ -31,7 +31,17 @@ public class PracticeTest {
     assertEquals(4, actual);
   }
 
-  
+  @Test
+  void testMostCommonTimeEfficient_emptyInput()
+  {
+    // Arrange
+    int[] input = {};
+    // Act
+    int actual = Practice.mostCommonTimeEfficient(input);
+    // Assert
+    assertEquals(0,  actual);
+    
+  }
 
 
   // ******************** TESTS of mostCommonSpaceEfficient ********************
