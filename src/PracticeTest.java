@@ -20,6 +20,19 @@ public class PracticeTest {
     assertEquals(4, actual);
   }
 
+  @Test
+  void testMostCommonTimeEfficient_multiMax()
+  {
+    // Arrange
+    int[] input = {2, 6, 4, 5, 4, 5, 3, 9, 9, 5, 4};
+    // Act
+    int actual = Practice.mostCommonTimeEfficient(input);
+    // Assert
+    assertEquals(4, actual);
+  }
+
+  
+
 
   // ******************** TESTS of mostCommonSpaceEfficient ********************
 
