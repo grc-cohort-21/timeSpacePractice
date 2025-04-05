@@ -10,13 +10,14 @@ public class PracticeTest {
 
   // ******************** TESTS for mostCommonTimeEfficient ********************
   @Test
-  void testMostCommonTimeEfficient_basicInput()
+  void testMostCommonTimeEfficient_oneMax()
   {
     // Arrange
-    
+    int[] input = {1, 5, 3, 7, 4, 4};
     // Act
-
+    int actual = Practice.mostCommonTimeEfficient(input);
     // Assert
+    assertEquals(4, actual);
   }
 
 
