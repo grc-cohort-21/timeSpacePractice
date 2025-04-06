@@ -42,4 +42,44 @@ public class PracticeTest {
     assertEquals(expected, actual);
   }
 
+
+  //--------------------------------------------------------------------\\
+
+
+  @Test
+  void testUniqueNumSpaceEfficientAlgo_multipleNumbersFindMostUnique() {
+    // arrange
+    int input[] = {1,2,2,2,3,3,3,3,4};
+    int expected = 3;
+    // act
+    int actual = Practice.mostCommonSpaceEfficient(input);
+    //assert
+    assertEquals(expected, actual);
+  }
+
+
+  @Test
+  void testUniqueNumSpaceEfficientAlgo_multipleSimilarNumbers() {
+    // arrange
+    int input[] = {1,2,2,2,2,3,3,3,3,4};
+    int expected = 2;
+    // act
+    int actual = Practice.mostCommonSpaceEfficient(input);
+    //assert
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  void testUniqueNumSpaceEfficientAlgo_fewNumbers() {
+    // arrange
+    int input[] = {1,1,1,3,3};
+    int expected = 1;
+    // act
+    int actual = Practice.mostCommonSpaceEfficient(input);
+    //assert
+    assertEquals(expected, actual);
+  }
+
+
+
 }

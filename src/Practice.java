@@ -114,6 +114,27 @@ public class Practice {
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
-    return -1;
-  }
+    int mostCommon = 0; //Variable for the Unique Number
+    int counter = nums[0]; //Counter for helping identify the Unique Number
+    
+    for(int i = 0; i < nums.length; i++) //Old Fashion loop for more percise manipulation **NOTE this loop acts as a placeholder, it runs grabs the first int, then starts running the second loop, now i equals the first int
+    {
+      int count = 0; //init count variable inside the loop
+      for(int j = 0; j < nums.length; j++) //start looping through it again for comparing
+      {
+        if(nums[j] == nums[i]) //if the first int from the array (j) = the first int of the array (i) go next, if the second int from the array (j) = the first int of the array (i) 
+        {
+          count++; //plus the count that was init with the for loop
+        }
+      }
+
+      if(count > mostCommon) //if count is greater than 0
+      {
+        mostCommon = count;//assign mostCommon to count **NOTE this will only work if its greater than 0, and so far any number that is just singly passed through will not pass this if
+        counter = nums[i]; //set the returned variable to the for loop (i) placeholder on the int
+      }
+    }
+
+    return counter; //Return the Unique Number
+}
 }
