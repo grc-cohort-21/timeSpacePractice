@@ -99,7 +99,7 @@ public class Practice {
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
    * Time Complexity: 0(n2)
-   * Space Complexity: 0(n)
+   * Space Complexity: 0(1)
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
