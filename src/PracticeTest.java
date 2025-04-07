@@ -66,4 +66,65 @@ void mostCommonTimeEfficient_NegativeElements()
 }
 
 
+
+
+
+//Tests for most common space efficient 
+@Test
+void mostCommonSpaceEfficient_SingleElement() 
+{
+  // arrange
+  int[] testArray = {100};
+  // act
+  int actual = Practice.mostCommonSpaceEfficient(testArray);
+  //assert
+  assertEquals(100, actual);
+}
+
+@Test
+void mostCommonSpaceEfficient_OneMostCommonValue() 
+{
+  // arrange
+  int[] testArray = {1, 2, 3, 1};
+  // act
+  int actual = Practice.mostCommonSpaceEfficient(testArray);
+  //assert
+  assertEquals(1, actual);
+}
+
+@Test
+void mostCommonSpaceEfficient_MultipleMostCommonValues() 
+{
+  // arrange
+  int[] testArray = {1, 2, 3, 1, 2, 2, 3, 3, 1};
+  // act
+  int actual = Practice.mostCommonSpaceEfficient(testArray);
+  //assert
+  assertEquals(1, actual);
+}
+
+@Test
+void mostCommonSpaceEfficient_EmptyArray() 
+{
+  // arrange
+  int[] testArray = {};
+  // act
+  int actual = Practice.mostCommonSpaceEfficient(testArray);
+  //assert
+  assertEquals(-1, actual);
+}
+
+@Test
+void mostCommonSpaceEfficient_NegativeElements() 
+{
+  // arrange
+  int[] testArray = {-1, 1, -2, 3, -1, 2, -3};
+  // act
+  int actual = Practice.mostCommonSpaceEfficient(testArray);
+  //assert
+  assertEquals(-1, actual);
+}
+
+
+
 }
