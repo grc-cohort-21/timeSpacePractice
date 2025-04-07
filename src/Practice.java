@@ -39,7 +39,7 @@ public class Practice {
     }
     return frequencies;
   }
-  
+
 //n = n*n
   // Time Complexity: O(n)
   // Space Complexity: O(n)
@@ -60,8 +60,8 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: O(n)
+   * Space Complexity: O(n) (potentially n number of entries)
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
@@ -69,8 +69,23 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
-    return -1;
-  }
+
+  Map<Integer, Integer> mapOfCommonNums = new HashMap<>();
+    int maxCount = 0;
+      int mostCommon = nums[0];
+
+    // Loop through the array and count how many times a number is read through
+    for (int commonNumber : nums) {
+      mapOfCommonNums.put(commonNumber, mapOfCommonNums.getOrDefault(commonNumber,0)+ 1 );
+       // checks if the common number is greater than the maxCount and then sets it to mostCommon
+        if (mapOfCommonNums.get(commonNumber) > maxCount) {
+          maxCount = mapOfCommonNums.get(commonNumber);
+          mostCommon = commonNumber;
+       }//end iff
+     }//end for
+     
+     return mostCommon;
+   }//end mostCommonTimeEfficient
 
   /**
    * Returns the integer that shows up most frequently in an array.
