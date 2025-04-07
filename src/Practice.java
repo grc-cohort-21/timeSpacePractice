@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class Practice {
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity:o(n)
+  // Space Complexity: o(n)
   public static List<Integer> findEvens(int[] array) {
     List<Integer> evens = new ArrayList<>();
     for (int num : array) {
@@ -17,8 +17,8 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity:o(n)
+  // Space Complexity: o(1)
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
@@ -28,8 +28,8 @@ public class Practice {
   }
   
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: o(n)
+  // Space Complexity: o(n)
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
@@ -40,8 +40,8 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: o(n^2)
+  // Space Complexity: o(n^2)
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
     for(int i = 0; i <= n*n; i+=2) {
@@ -68,7 +68,36 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
-    return -1;
+    //map that store how many time each number appears
+    Map<Integer, Integer> countMap = new HashMap<>();
+
+    //map for the index
+    Map<Integer, Integer> firstSeen = new HashMap<>();
+
+    int maxCount = 0;
+    int mostAppear = nums[0];
+
+    for(int i=0; i< nums.length; i++){
+      int num = nums[i];
+    
+
+    //update count
+    countMap.put(num, countMap.getOrDefault(num, 0) +1);
+
+    if(!firstSeen.containsKey(num)){
+      firstSeen.put(num, i);
+    }
+    
+    int count = countMap.get(num);
+
+    if(count > maxCount || (count == maxCount && firstSeen.get(num)< firstSeen.get(mostAppear))){
+      maxCount =count;
+      mostAppear =num;
+    }
+  }
+
+
+    return mostAppear;
   }
 
   /**
@@ -89,6 +118,25 @@ public class Practice {
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
-    return -1;
+    int mostCommon = nums[0];
+    int maxCount = 0;
+
+    for(int i=0; i< nums.length; i++){
+      int count =0;
+
+      for(int j =0; j < nums.length; j++){
+        if (nums[j] == nums[i]){
+          count ++;
+        }
+      }
+
+      if(count > maxCount){
+        maxCount = count;
+        mostCommon= nums[i];
+      }
+
+
+    }
+    return mostCommon;
   }
 }
