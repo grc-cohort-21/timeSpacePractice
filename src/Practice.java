@@ -101,11 +101,11 @@ public class Practice {
     //finding the num that shows up most (tiebreaker built in)  
     for(int i = 0; i < nums.length; i++)
     {
-      if(count == 0)
+      if(count == 0) //starting number and finding recurring num
         possibleNum = nums[i];
-      if(nums[i] == possibleNum)
+      if(nums[i] == possibleNum) //checking if num[i] value has already appeared, ++
         count ++;
-      if(nums[i] != possibleNum)
+      if(nums[i] != possibleNum) //if it hasn't appeared then --
         count--;
     }
 
