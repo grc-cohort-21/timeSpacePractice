@@ -109,12 +109,8 @@ public class Practice {
         count--;
     }
 
-    for(int i = 0; i < list.length(); i++)    
-    {
-      //if()
-    }
+    //verification needed?
 
-
-    return -1;
+    return possibleNum;
   }
 }
