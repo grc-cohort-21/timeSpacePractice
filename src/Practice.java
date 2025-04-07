@@ -5,8 +5,9 @@ import java.util.Map;
 
 public class Practice {
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: 0(n)
+  // Space Complexity: 0(n)
+  
   public static List<Integer> findEvens(int[] array) {
     List<Integer> evens = new ArrayList<>();
     for (int num : array) {
@@ -17,8 +18,8 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: 0(n)
+  // Space Complexity: 0(1)
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
@@ -28,8 +29,8 @@ public class Practice {
   }
   
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: 0(n)
+  // Space Complexity: 0(n)
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
@@ -40,8 +41,8 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: 0(n2)
+  // Space Complexity: 0(n)
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
     for(int i = 0; i <= n*n; i+=2) {
@@ -68,8 +69,25 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.size()
-    return -1;
+    if (nums == null || nums.length == 0) {
+      throw new IllegalArgumentException("Invalid input");
   }
+  
+  Map<Integer, Integer> counts = new HashMap<>();
+  int result = nums[0];
+  int max = 1;
+  
+  for (int num : nums) {
+      int count = counts.getOrDefault(num, 0) + 1;
+      counts.put(num, count);
+      if (count > max) {
+          max = count;
+          result = num;
+      }
+  }
+  
+  return result;
+}
 
   /**
    * Returns the integer that shows up most frequently in an array.
@@ -80,15 +98,36 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: 0(n2)
+   * Space Complexity: 0(1)
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
-  public static int mostCommonSpaceEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
-    // in O(1) space.
-    return -1;
-  }
+ public static int mostCommonSpaceEfficient(int[] nums) {
+    if (nums == null || nums.length == 0) {
+        throw new IllegalArgumentException("Input array is empty or null");
+    }
+    
+    int maxCount = 0;
+    int mostCommon = nums[0];
+    
+    for (int i = 0; i < nums.length; i++) {
+        int currentNum = nums[i];
+        int currentCount = 0;
+        
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] == currentNum) {
+                currentCount++;
+            }
+        }
+        
+        if (currentCount > maxCount) {
+            maxCount = currentCount;
+            mostCommon = currentNum;
+        }
+    }
+    
+    return mostCommon;
+}
 }
