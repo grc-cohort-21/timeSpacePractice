@@ -90,7 +90,12 @@ public class Practice {
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
-    int counter = 0;
+
+    //empty array
+    if(nums.length == 0)
+      return -1;
+
+    
 
     String list = "";
   
@@ -98,12 +103,9 @@ public class Practice {
     {
       if(nums[i] == nums[i+1])
       {
-        counter++;
       }
       else
       {
-        list = list + counter;
-        counter = 0;
       }
     }
 
