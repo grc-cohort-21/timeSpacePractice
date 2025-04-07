@@ -95,18 +95,18 @@ public class Practice {
     if(nums.length == 0)
       return -1;
 
-    
+    int count = 0;
+    int possibleNum = 0;
 
-    String list = "";
-  
+    //finding the num that shows up most (tiebreaker built in)  
     for(int i = 0; i < nums.length; i++)
     {
-      if(nums[i] == nums[i+1])
-      {
-      }
-      else
-      {
-      }
+      if(count == 0)
+        possibleNum = nums[i];
+      if(nums[i] == possibleNum)
+        count ++;
+      if(nums[i] != possibleNum)
+        count--;
     }
 
     for(int i = 0; i < list.length(); i++)    
