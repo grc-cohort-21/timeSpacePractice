@@ -81,7 +81,7 @@ public class Practice {
         if (mapOfCommonNums.get(commonNumber) > maxCount) {
           maxCount = mapOfCommonNums.get(commonNumber);
           mostCommon = commonNumber;
-       }//end iff
+       }//end if
      }//end for
      
      return mostCommon;
