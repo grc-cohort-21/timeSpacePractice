@@ -19,7 +19,19 @@ public class PracticeTest {
         int result = Practice.mostCommonTimeEfficient(numbers);
     
       // Assert
-        assertEquals(7, result); //expected res: 7
+        assertEquals(7, result); //expected res: 7, most common number
+    }
+
+    @Test
+      public void timeEfficientMostCommonNumTie() {
+      // Arrange
+       int[] nums = {1, 1, 2, 2, 3, 3};
+        
+      // Act
+        int result = Practice.mostCommonTimeEfficient(nums);
+        
+      // Assert
+        assertEquals(1, result); //expected res: 1, the first most common number is never overwritten since its a tie
     }
 
 
