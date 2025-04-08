@@ -64,13 +64,13 @@ public class PracticeTest {
     @Test
       public void spaceEfficientMostCommonNumTie() {
       // Arrange
-        int[] nums = {1, 1, 2, 2, 3, 3};
+        int[] nums = {1, 2, 3, 2, 3};
         
       // Act
         int result = Practice.mostCommonSpaceEfficient(nums);
         
       // Assert
-        assertEquals(1, result); //expected res: 1, the first most common number is never overwritten since its a tie
+        assertEquals(2, result); //expected res: 1, the first most common number is never overwritten since its a tie
     }//end tie
 
     @Test

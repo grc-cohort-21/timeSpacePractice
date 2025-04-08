@@ -123,14 +123,7 @@ public class Practice {
       if(num != possibleNum) //if it hasn't appeared then --
         count--;
     }
-
-    int verifyCount = 0;
-    //verification needed?
-    for (int num : nums) 
-    {
-      if (num == possibleNum) 
-        verifyCount++;     
-    }
+    
     return possibleNum;
   }
 }
