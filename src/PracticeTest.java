@@ -12,7 +12,7 @@ public class PracticeTest {
     //arrange
     int[] input ={1, 2, 2, 2, 3, 3, 4, 5};
     //act
-    int actual = Practice.mostCommonSpaceEfficient(input);
+    int actual = Practice.mostCommonTimeEfficient(input);
     //assert
     assertEquals(2, actual);
 
@@ -23,7 +23,7 @@ public class PracticeTest {
     //arrange
     int[]input ={4, 5, 4, 5};
     //act
-    int actual =Practice.mostCommonSpaceEfficient(input);
+    int actual =Practice.mostCommonTimeEfficient(input);
     //assert
     assertEquals(4, actual);
   }
