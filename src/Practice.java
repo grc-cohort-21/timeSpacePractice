@@ -114,16 +114,16 @@ public class Practice {
     int possibleNum = 0;
 
     //finding the num that shows up most (tiebreaker built in)  
-    for(int num : nums)
+    for(int i = nums.length-1; i >= 0; i--)
     {
       if(count == 0) //starting number and finding recurring num
-        possibleNum = num;
-      if(num == possibleNum) //checking if num[i] value has already appeared, ++
+        possibleNum = nums[i];
+      if(nums[i] == possibleNum) //checking if num[i] value has already appeared, ++
         count ++;
-      if(num != possibleNum) //if it hasn't appeared then --
+      if(nums[i] != possibleNum) //if it hasn't appeared then --
         count--;
     }
-    
+   
     return possibleNum;
   }
 }
