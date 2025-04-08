@@ -7,6 +7,7 @@ public class Practice {
 
   // Time Complexity:o(n)
   // Space Complexity: o(n)
+  // n = array.length
   public static List<Integer> findEvens(int[] array) {
     List<Integer> evens = new ArrayList<>();
     for (int num : array) {
@@ -19,6 +20,7 @@ public class Practice {
 
   // Time Complexity:o(n)
   // Space Complexity: o(1)
+  //n = matrix.length
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
@@ -30,6 +32,7 @@ public class Practice {
 
   // Time Complexity: o(n)
   // Space Complexity: o(n)
+  // n = array.length
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
@@ -42,6 +45,7 @@ public class Practice {
 
   // Time Complexity: o(n^2)
   // Space Complexity: o(n^2)
+  //n = input parameter 'n'
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
     for(int i = 0; i <= n*n; i+=2) {
@@ -67,7 +71,9 @@ public class Practice {
    */
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
-    // in O(n) time. n = nums.size()
+    // Time Complexity: O(n)
+    //n = nums.length
+  // Space Complexity: O(n)
     //map that store how many time each number appears
     Map<Integer, Integer> countMap = new HashMap<>();
 
@@ -117,6 +123,9 @@ public class Practice {
    */
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
+     // Time Complexity: O(n^2)
+     // n = nums.length
+  // Space Complexity: O(1)
     // in O(1) space.
     int mostCommon = nums[0];
     int maxCount = 0;
