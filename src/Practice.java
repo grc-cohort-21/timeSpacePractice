@@ -59,7 +59,7 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
+   * Time Complexity: 2n -> n
    * Space Complexity: 
    * 
    * @param nums An array of integers
@@ -95,15 +95,33 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: n^2
+   * Space Complexity: 1
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
+
   public static int mostCommonSpaceEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
-    // in O(1) space.
-    return -1;
+    int king = 0;
+    int kingFrequency = 0;
+    for (int i = 0; i < nums.length; i++) {
+      int frequency = 0;
+      for (int j = 0; j < nums.length; j++) {
+        if (nums[i] == nums[j]) {
+          frequency++;
+        }
+      }
+      if (frequency > kingFrequency) {
+        kingFrequency = frequency;
+        king = nums[i];
+      }
+    }
+    return king;
   }
 }
+
+// I wonder if there is a way to get to 
+// time complexity log(n) or lower
+// while preserving space complexity at n or lower.
+// a tree, maybe?
