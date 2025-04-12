@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class Practice {
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity:   n
+  // Space Complexity:  n
   public static List<Integer> findEvens(int[] array) {
     List<Integer> evens = new ArrayList<>();
     for (int num : array) {
@@ -17,8 +17,8 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity:   n
+  // Space Complexity:  n^2
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
@@ -28,8 +28,8 @@ public class Practice {
   }
   
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity:   n
+  // Space Complexity:  n
   // Does the 'T' look confusing? Consider refreshing on generic methods
   // We'll revisit generics as a class later
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
@@ -40,8 +40,8 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity:   n^2
+  // Space Complexity:  n
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
     for(int i = 0; i <= n*n; i+=2) {
@@ -66,9 +66,24 @@ public class Practice {
    * @return the integer that shows up most commonly
    */
   public static int mostCommonTimeEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
-    // in O(n) time. n = nums.size()
-    return -1;
+    Map<Integer, Integer> frequencyMap = new HashMap<>();
+    for (int num : nums){
+      if(frequencyMap.containsKey(num)){
+        frequencyMap.put(num, frequencyMap.get(num)+1);
+      }
+      else{
+        frequencyMap.put(num, 1);
+      }
+    }
+    int king = -1;
+    int kingOccurence = -1;
+    for(int key : frequencyMap.keySet()){
+      if(frequencyMap.get(key) > kingOccurence){
+        kingOccurence = frequencyMap.get(key);
+        king = frequencyMap.get(key);
+      }
+    }
+    return king;
   }
 
   /**
